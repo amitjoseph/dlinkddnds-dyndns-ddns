@@ -1,7 +1,13 @@
 import urllib,json
 
-def UpdateIp2Dyn(ip):
-    updateURL="http://USERNAME:PASSWORD@members.dyndns.org/nic/update?hostname=YOURDOMAIN.dlinkddns.com&myip="+ip+"&wildcard=NOCHG&mx=NOCHG&backmx=NOCHG"
+# TO CHANGE --------------------
+username="YOUR_USERNAME"
+password="YOUR_PASSWORD"
+domain="DOMAINNAME"
+# ------------------------------
+
+def updateIp2Dyn(ip):
+    updateURL="http://"+username+":"+password+"@members.dyndns.org/nic/update?hostname="+domain+"&myip="+ip+"&wildcard=NOCHG&mx=NOCHG&backmx=NOCHG"
     try:
         response =urllib.urlopen(updateURL)
         print response.read()
@@ -21,4 +27,4 @@ def getPublicIP():
         print 'No Internet!'
     
 ip=str(getPublicIP())
-UpdateIp2Dyn(ip)
+updateIp2Dyn(ip)
