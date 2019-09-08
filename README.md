@@ -4,7 +4,7 @@
  ```
  curl -O https://raw.githubusercontent.com/amitjoseph/dlinkddnds-dyndns-ddns/master/code.py
  ```
- ## Make Changes
+ ### Make Changes
 
 Edit the Username, Password and Domain name.
 
