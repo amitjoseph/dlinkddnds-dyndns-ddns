@@ -21,10 +21,14 @@ def getPublicIP():
     try:
         response =urllib.urlopen(publicIpURL)
         data=json.loads(response.read())
-        ip=data['ip']
+        ip=str(data['ip'])
         return ip
     except IOError:
         print 'No Internet!'
     
-ip=str(getPublicIP())
-updateIp2Dyn(ip)
+
+def main():
+    updateIp2Dyn(getPublicIP())
+
+if __name__== "__main__":
+  main()
