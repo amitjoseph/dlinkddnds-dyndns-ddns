@@ -1,4 +1,4 @@
-import urllib,json
+import urllib,json,socket
 
 # TO CHANGE --------------------
 username="YOUR_USERNAME"
@@ -27,8 +27,18 @@ def getPublicIP():
         print 'No Internet!'
     
 
+def checkDns():
+    dnsIP=str(socket.gethostbyname(domain))
+    publicIP=getPublicIP()
+    
+    if dnsIP == publicIP:
+        print("Already Updated! "+dnsIP)
+    else:
+        updateIp2Dyn(publicIP)
+        
+
 def main():
-    updateIp2Dyn(getPublicIP())
+    checkDns()
 
 if __name__== "__main__":
   main()
