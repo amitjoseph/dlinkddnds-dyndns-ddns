@@ -7,7 +7,14 @@
  ### Make Changes
 
 Edit the Username, Password and Domain name.
-
+```
+# TO CHANGE --------------------
+username="YOUR_USERNAME"
+password="YOUR_PASSWORD"
+domain="DOMAINNAME"
+# ------------------------------
+....
+```
 ## Schedule Script using Crontab
 ```
 crontab -eu root
