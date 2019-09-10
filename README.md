@@ -1,5 +1,5 @@
 # dlinkddnds-dyndns-ddns
- Update your [Dyanamic Ip](https://support.google.com/fiber/answer/3547208?hl=en) to your domain using Dydns / Dlinkddns
+ Update your [Dyanamic Ip](https://support.google.com/fiber/answer/3547208?hl=en) to your domain using Dydns / Dlinkddns Service.
  ## Download the script using cURL
  ```
  curl -O https://raw.githubusercontent.com/amitjoseph/dlinkddnds-dyndns-ddns/master/code.py
