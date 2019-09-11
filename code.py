@@ -27,7 +27,7 @@ def getPublicIP():
         ip=str(data['ip'])
         return ip
     except IOError:
-        print 'No Internet!'
+       logging.critical('Cannot get Public IP!')
     
 # Checks IP of the Domain and Public
 # Updates new IP if it has changed
@@ -36,9 +36,10 @@ def checkDns():
     publicIP=getPublicIP()
     
     if dnsIP == publicIP:
-        print("Already Updated! "+dnsIP)
+        logging.debug('Checked OK! '+dnsIP)
     else:
         updateIp2Dyn(publicIP)
+        logging.critical("Updating IP "+publicIP)
         
 
 def main():
