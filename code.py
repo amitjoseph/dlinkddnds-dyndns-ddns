@@ -7,7 +7,7 @@ domain="DOMAINNAME"
 # ------------------------------
 
 #Logging Configuration
-logging.basicConfig(filename="ddns.log", format='%(asctime)s %(message)s',level=logging.DEBUG) 
+logging.basicConfig(filename="/FULL_PATH_CHANGETHIS/ddns.log", format='%(asctime)s %(message)s',level=logging.DEBUG) 
 
 def updateIp2Dyn(ip):
     updateURL="http://"+username+":"+password+"@members.dyndns.org/nic/update?hostname="+domain+"&myip="+ip+"&wildcard=NOCHG&mx=NOCHG&backmx=NOCHG"
